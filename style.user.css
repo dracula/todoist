@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dracula for Todoist
 @namespace      github.com/dracula
-@version        1.1.0
+@version        1.2.0
 @description    A dark theme for Todoist
 @homepageURL    https://draculatheme.com/todoist
 @supportURL     https://github.com/dracula/todoist/issues
@@ -36,6 +36,10 @@
 
         /* Non-Standard Color: center between primary background and gray (#808080) */
         --disabled: #505158;
+        /* Non-Standard Color: lerped between purple (15% darker) and gray (#808080) */
+        --purple-disabled: #8776A0;
+
+        --accent-color: var(--purple);
 
         /* used by the side bars (start page and task detail view) */
         --reactist-bg-aside: var(--background-primary) !important;
@@ -57,24 +61,22 @@
         /* menu items: background color on hover */
         --reactist-actionable-tertiary-hover-fill: var(--background-primary);
 
+        /* Primary Buttons (accent color) - we use slightly darker colors here because the dracula purple doesn't have a good contrast with the white */
+        --reactist-actionable-primary-idle-fill: var(--purple-15-darker);
+        --reactist-actionable-primary-hover-fill: var(--purple-25-darker);
+        --reactist-actionable-primary-disabled-fill: var(--purple-disabled);
+        --reactist-actionable-primary-idle-tint: var(--foreground);
+        --reactist-actionable-primary-hover-tint: var(--reactist-actionable-primary-idle-tint);
+
         /* Buttons in the Settings Menu */
         --reactist-actionable-secondary-idle-fill: var(--background-primary-10-lighter);
         --reactist-actionable-secondary-hover-fill: var(--background-primary-5-lighter);
         --reactist-actionable-secondary-disabled-fill: var(--disabled);
-
         --reactist-actionable-secondary-destructive-idle-tint: var(--red);
         --reactist-actionable-secondary-destructive-hover-tint: var(--red-25-darker);
 
         /* Item hover in the left sidebar of the settings menu */
         --reactist-actionable-quaternary-hover-fill: var(--background-secondary);
-
-        --accent-color: var(--purple);
-
-        /* Primary Buttons (accent color) - we use slightly darker colors here because the dracula purple doesn't have a good contrast with the white */
-        --reactist-actionable-primary-idle-tint: var(--foreground);
-        --reactist-actionable-primary-hover-tint: var(--reactist-actionable-primary-idle-tint);
-        --reactist-actionable-primary-idle-fill: var(--purple-15-darker);
-        --reactist-actionable-primary-hover-fill: var(--purple-25-darker);
 
         /* Buttons like the "Add section" one - @Todoist, why are there so many different variables??? Please, standardize the system! */
         --theme-button-bg: var(--reactist-actionable-primary-idle-fill);
@@ -98,7 +100,7 @@
 
         /* Border around the duration selector in the "Your Productivity" dropdown */
         --reactist-tab-neutral-track: var(--current-line);
-        
+
         /* toasts (like the "Todoist for Operatingsystem") */
         --reactist-bg-toast: var(--background-secondary);
         --reactist-toast-actionable-primary-tint: var(--accent-color);
