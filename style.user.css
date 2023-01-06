@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dracula for Todoist
 @namespace      github.com/dracula
-@version        1.0.0
+@version        1.1.0
 @description    A dark theme for Todoist
 @homepageURL    https://draculatheme.com/todoist
 @supportURL     https://github.com/dracula/todoist/issues
@@ -98,6 +98,11 @@
 
         /* Border around the duration selector in the "Your Productivity" dropdown */
         --reactist-tab-neutral-track: var(--current-line);
+        
+        /* toasts (like the "Todoist for Operatingsystem") */
+        --reactist-bg-toast: var(--background-secondary);
+        --reactist-toast-actionable-primary-tint: var(--accent-color);
+        --reactist-toast-actionable-hover-fill: var(--background-primary-5-lighter);
     }
 
     /* Priority Colors */
@@ -339,6 +344,10 @@
     /* Premium Modal - seperate section */
     .theme_dark .PremiumOnlyModal h1 {
         background-color: var(--background-secondary);
+    }
+    
+    .theme_dark .reschedule_menu__button {
+      color: var(--accent-color);
     }
 
     /* TODO
