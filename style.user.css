@@ -12,347 +12,378 @@
 /* NOTE: "!important" is only appended when strictly necessary to override a style. */
 
 @-moz-document domain("todoist.com") {
-    /* don't add any spaces or anything or it'll break */
-    html:root.theme_dark {
-        --background-primary: #282a36;
-        --background-primary-5-lighter: #313342;
-        --background-primary-10-lighter: #3a3d4e;
-        --background-secondary: #21222C;
-        --background-tertiary: #191A21;
-        --current-line: #44475a;
-        --current-line-25-lighter: #6a6f8c;
-        --foreground: #f8f8f2;
-        --comment: #6272a4;
-        --cyan: #8be9fd;
-        --green: #50fa7b;
-        --orange: #ffb86c;
-        --pink: #ff79c6;
-        --purple: #bd93f9;
-        --purple-15-darker: #9b5bf6;
-        --purple-25-darker: #8435f4;
-        --red: #ff5555;
-        --red-25-darker: #ff3333;
-        --yellow: #f1fa8c;
+  /* don't add any spaces or anything or it'll break */
+  html:root.theme_dark {
+    --background-primary: #282a36;
+    --background-primary-5-lighter: #313342;
+    --background-primary-10-lighter: #3a3d4e;
+    --background-secondary: #21222c;
+    --background-tertiary: #191a21;
+    --current-line: #44475a;
+    --current-line-25-lighter: #6a6f8c;
+    --foreground: #f8f8f2;
+    --comment: #6272a4;
+    --cyan: #8be9fd;
+    --green: #50fa7b;
+    --orange: #ffb86c;
+    --pink: #ff79c6;
+    --purple: #bd93f9;
+    --purple-15-darker: #9b5bf6;
+    --purple-25-darker: #8435f4;
+    --red: #ff5555;
+    --red-25-darker: #ff3333;
+    --yellow: #f1fa8c;
 
-        /* Non-Standard Color: center between primary background and gray (#808080) */
-        --disabled: #505158;
-        /* Non-Standard Color: lerped between purple (15% darker) and gray (#808080) */
-        --purple-disabled: #8776A0;
+    /* Non-Standard Color: center between primary background and gray (#808080) */
+    --disabled: #505158;
+    /* Non-Standard Color: lerped between purple (15% darker) and gray (#808080) */
+    --purple-disabled: #8776a0;
 
-        --accent-color: var(--purple);
+    --accent-color: var(--purple);
 
-        /* used by the side bars (start page and task detail view) */
-        --reactist-bg-aside: var(--background-primary) !important;
+    /* used by the side bars (start page and task detail view) */
+    --reactist-bg-aside: var(--background-primary) !important;
 
-        /* unused by the vanilla app, but we use this variable a bit further down */
-        --app-topbar-background-color: var(--background-secondary) !important;
+    /* unused by the vanilla app, but we use this variable a bit further down */
+    --app-topbar-background-color: var(--background-secondary) !important;
 
-        /* used by the task detail view */
-        --reactist-bg-default: var(--background-primary) !important;
+    /* used by the task detail view */
+    --reactist-bg-default: var(--background-primary) !important;
 
-        /* more or less unused, here for good measure */
-        --app-background-color: var(background-primary) !important;
+    /* more or less unused, here for good measure */
+    --app-background-color: var(background-primary) !important;
 
-        /* font color */
-        --reactist-btn-idle-tint: var(--foreground) !important;
+    /* font color */
+    --reactist-btn-idle-tint: var(--foreground) !important;
 
-        --task-divider: var(--current-line);
+    --task-divider: var(--current-line);
 
-        /* menu items: background color on hover */
-        --reactist-actionable-tertiary-hover-fill: var(--background-primary);
+    /* menu items: background color on hover */
+    --reactist-actionable-tertiary-hover-fill: var(--background-primary);
 
-        /* Primary Buttons (accent color) - we use slightly darker colors here because the dracula purple doesn't have a good contrast with the white */
-        --reactist-actionable-primary-idle-fill: var(--purple-15-darker);
-        --reactist-actionable-primary-hover-fill: var(--purple-25-darker);
-        --reactist-actionable-primary-disabled-fill: var(--purple-disabled);
-        --reactist-actionable-primary-idle-tint: var(--foreground);
-        --reactist-actionable-primary-hover-tint: var(--reactist-actionable-primary-idle-tint);
+    /* Primary Buttons (accent color) - we use slightly darker colors here because the dracula purple doesn't have a good contrast with the white */
+    --reactist-actionable-primary-idle-fill: var(--purple-15-darker);
+    --reactist-actionable-primary-hover-fill: var(--purple-25-darker);
+    --reactist-actionable-primary-disabled-fill: var(--purple-disabled);
+    --reactist-actionable-primary-idle-tint: var(--foreground);
+    --reactist-actionable-primary-hover-tint: var(
+      --reactist-actionable-primary-idle-tint
+    );
 
-        /* Buttons in the Settings Menu */
-        --reactist-actionable-secondary-idle-fill: var(--background-primary-10-lighter);
-        --reactist-actionable-secondary-hover-fill: var(--background-primary-5-lighter);
-        --reactist-actionable-secondary-disabled-fill: var(--disabled);
-        --reactist-actionable-secondary-destructive-idle-tint: var(--red);
-        --reactist-actionable-secondary-destructive-hover-tint: var(--red-25-darker);
+    /* Buttons in the Settings Menu */
+    --reactist-actionable-secondary-idle-fill: var(
+      --background-primary-10-lighter
+    );
+    --reactist-actionable-secondary-hover-fill: var(
+      --background-primary-5-lighter
+    );
+    --reactist-actionable-secondary-disabled-fill: var(--disabled);
+    --reactist-actionable-secondary-destructive-idle-tint: var(--red);
+    --reactist-actionable-secondary-destructive-hover-tint: var(
+      --red-25-darker
+    );
 
-        /* Item hover in the left sidebar of the settings menu */
-        --reactist-actionable-quaternary-hover-fill: var(--background-secondary);
+    /* Item hover in the left sidebar of the settings menu */
+    --reactist-actionable-quaternary-hover-fill: var(--background-secondary);
 
-        /* Buttons like the "Add section" one - @Todoist, why are there so many different variables??? Please, standardize the system! */
-        --theme-button-bg: var(--reactist-actionable-primary-idle-fill);
-        --theme-button-color: var(--reactist-actionable-primary-idle-tint);
+    /* Buttons like the "Add section" one - @Todoist, why are there so many different variables??? Please, standardize the system! */
+    --theme-button-bg: var(--reactist-actionable-primary-idle-fill);
+    --theme-button-color: var(--reactist-actionable-primary-idle-tint);
 
-        /* Ticks, for example in the priority selector dropdown of the task view */
-        --theme-scheduler-primary-color: var(--accent-color);
-        /* Dropdowns like the "more actions" (three dots) in the task view */
-        --reactist-bg-menu: var(--background-primary);
-        /* Plus symbol in the project view */
-        --theme-add-task-icon-color: var(--accent-color);
-        /* "Add task" text - on hover */
-        --theme-add-task-text-color: var(--accent-color);
+    /* Ticks, for example in the priority selector dropdown of the task view */
+    --theme-scheduler-primary-color: var(--accent-color);
+    /* Dropdowns like the "more actions" (three dots) in the task view */
+    --reactist-bg-menu: var(--background-primary);
+    /* Plus symbol in the project view */
+    --theme-add-task-icon-color: var(--accent-color);
+    /* "Add task" text - on hover */
+    --theme-add-task-text-color: var(--accent-color);
 
-        --tooltip-idle-fill: var(--background-secondary);
+    --tooltip-idle-fill: var(--background-secondary);
 
-        /* "Your Productivity" dropdown */
-        --background-base-primary: var(--background-primary);
-        /* Top bar when multi selecting tasks */
-        --background-base-secondary: var(--background-secondary);
+    /* "Your Productivity" dropdown */
+    --background-base-primary: var(--background-primary);
+    /* Top bar when multi selecting tasks */
+    --background-base-secondary: var(--background-secondary);
 
-        /* Border around the duration selector in the "Your Productivity" dropdown */
-        --reactist-tab-neutral-track: var(--current-line);
+    /* Border around the duration selector in the "Your Productivity" dropdown */
+    --reactist-tab-neutral-track: var(--current-line);
 
-        /* toasts (like the "Todoist for Operatingsystem") */
-        --reactist-bg-toast: var(--background-secondary);
-        --reactist-toast-actionable-primary-tint: var(--accent-color);
-        --reactist-toast-actionable-hover-fill: var(--background-primary-5-lighter);
-    }
+    /* toasts (like the "Todoist for Operatingsystem") */
+    --reactist-bg-toast: var(--background-secondary);
+    --reactist-toast-actionable-primary-tint: var(--accent-color);
+    --reactist-toast-actionable-hover-fill: var(--background-primary-5-lighter);
+  }
 
-    /* Priority Colors */
-    .theme_dark .task_checkbox.priority_1 .task_checkbox__circle {
-      border-color: var(--current-line);
-      color: var(--current-line);
-    }
+  /* Priority Colors */
+  .theme_dark .task_checkbox.priority_1 .task_checkbox__circle {
+    border-color: var(--current-line);
+    color: var(--current-line);
+  }
 
-    .theme_dark .task_checkbox.priority_2 .task_checkbox__circle {
-      border-color: var(--cyan);
-      color: var(--cyan);
-    }
+  .theme_dark .task_checkbox.priority_2 .task_checkbox__circle {
+    border-color: var(--cyan);
+    color: var(--cyan);
+  }
 
-    .theme_dark .task_checkbox.priority_3 .task_checkbox__circle {
-      border-color: var(--orange);
-      color: var(--orange);
-    }
+  .theme_dark .task_checkbox.priority_3 .task_checkbox__circle {
+    border-color: var(--orange);
+    color: var(--orange);
+  }
 
-    .theme_dark .task_checkbox.priority_4 .task_checkbox__circle {
-      border-color: var(--red);
-      color: var(--red);
-    }
+  .theme_dark .task_checkbox.priority_4 .task_checkbox__circle {
+    border-color: var(--red);
+    color: var(--red);
+  }
 
-    /* the header and the content have the same background color */
-    .theme_dark .view_header, .theme_dark #content {
-        background-color: var(--background-primary);
-    }
+  /* the header and the content have the same background color */
+  .theme_dark .view_header,
+  .theme_dark #content {
+    background-color: var(--background-primary);
+  }
 
-    /* make background color of task items transparent */
-    .theme_dark .task_list_item {
-      background-color: initial;
-    }
+  /* make background color of task items transparent */
+  .theme_dark .task_list_item {
+    background-color: initial;
+  }
 
-    .theme_dark #top_bar {
-        background-color: var(--app-topbar-background-color);
-    }
+  .theme_dark #top_bar {
+    background-color: var(--app-topbar-background-color);
+  }
 
-    /* this is an interesting one - when the sidebar animates, theres a bit of empty space between the animated sidebar and the center content which is a passthrough to the "content_wrapper" element.
+  /* this is an interesting one - when the sidebar animates, theres a bit of empty space between the animated sidebar and the center content which is a passthrough to the "content_wrapper" element.
        therefore, we have to override it's color to not have a wrong background color while the sidebar is being animated */
-    .theme_dark #content_wrapper {
-        background-color: var(--background-primary);
-    }
+  .theme_dark #content_wrapper {
+    background-color: var(--background-primary);
+  }
 
-    .theme_dark .loading_screen {
-        background-color: var(--background-primary);
-    }
+  .theme_dark .loading_screen {
+    background-color: var(--background-primary);
+  }
 
-    /* Sidebar resize */
-    .theme_dark .resize_handle.resize_active, .theme_dark .resize_handle:hover {
-        background-color: var(--current-line);
-    }
+  /* Sidebar resize */
+  .theme_dark .resize_handle.resize_active,
+  .theme_dark .resize_handle:hover {
+    background-color: var(--current-line);
+  }
 
-    /* Dropdown menu when pressing the three dots in the project view */
-    .theme_dark .menu_list, .theme_dark .reminders_picker_options {
-        background-color: var(--background-secondary) !important;
-        border-color: var(--current-line) !important;
-    }
+  /* Dropdown menu when pressing the three dots in the project view */
+  .theme_dark .menu_list,
+  .theme_dark .reminders_picker_options {
+    background-color: var(--background-secondary) !important;
+    border-color: var(--current-line) !important;
+  }
 
-    /* The headers of "categories" in projects */
-    .theme_dark .section header {
-        background-color: var(--background-primary);
-    }
+  /* The headers of "categories" in projects */
+  .theme_dark .section header {
+    background-color: var(--background-primary);
+  }
 
-    /* "Daily Goal: x" tooltip in the "Your Producitvity dropdown" */
-    .theme_dark .ist_tooltip_content {
-        background-color: var(--background-primary) !important;
-    }
+  /* "Daily Goal: x" tooltip in the "Your Producitvity dropdown" */
+  .theme_dark .ist_tooltip_content {
+    background-color: var(--background-primary) !important;
+  }
 
-    /* links in the "Your Productivity" dropdown */
-    .theme_dark .completed_quick_viz a {
-        color: var(--accent-color);
-    }
+  /* links in the "Your Productivity" dropdown */
+  .theme_dark .completed_quick_viz a {
+    color: var(--accent-color);
+  }
 
-    /* Duration selectors in the "Your Productivity" dropdown */
-    .theme_dark #daily[aria-selected=true], .theme_dark #weekly[aria-selected=true], .theme_dark #karma[aria-selected=true] {
-        background-color: var(--background-secondary);
-    }
+  /* Duration selectors in the "Your Productivity" dropdown */
+  .theme_dark #daily[aria-selected="true"],
+  .theme_dark #weekly[aria-selected="true"],
+  .theme_dark #karma[aria-selected="true"] {
+    background-color: var(--background-secondary);
+  }
 
-    /* Calendar dropdown */
-    .theme_dark .scheduler, .theme_dark .scheduler-timepicker, .theme_dark .scheduler-timezone-list {
-        background-color: var(--background-primary);
-        border-color: var(--current-line);
-    }
+  /* Calendar dropdown */
+  .theme_dark .scheduler,
+  .theme_dark .scheduler-timepicker,
+  .theme_dark .scheduler-timezone-list {
+    background-color: var(--background-primary);
+    border-color: var(--current-line);
+  }
 
-    /* Background of the hovered dropdown option */
-    .theme_dark .dropdown_select--popup li[role="option"].dropdown_select__option--highlighted, .theme_dark .dropdown_select--popup li[role="option"][aria-selected="true"].dropdown_select__option--legacy {
-      background-color: var(--background-secondary);
-    }
+  /* Background of the hovered dropdown option */
+  .theme_dark
+    .dropdown_select--popup
+    li[role="option"].dropdown_select__option--highlighted,
+  .theme_dark
+    .dropdown_select--popup
+    li[role="option"][aria-selected="true"].dropdown_select__option--legacy {
+    background-color: var(--background-secondary);
+  }
 
-    /* Background of various dropdowns, most notably in the task view */
-    .theme_dark .dropdown_select--popup {
-        background-color: var(--background-primary);
-        border-color: var(--current-line);
-    }
+  /* Background of various dropdowns, most notably in the task view */
+  .theme_dark .dropdown_select--popup {
+    background-color: var(--background-primary);
+    border-color: var(--current-line);
+  }
 
-    /* Priority dropdown in the task view */
-    .theme_dark .priority_picker {
-         background-color: var(--background-primary);
-         border-color: var(--current-line);
-    }
+  /* Priority dropdown in the task view */
+  .theme_dark .priority_picker {
+    background-color: var(--background-primary);
+    border-color: var(--current-line);
+  }
 
-    /* Border around the priority dropdown in the task view */
-    .theme_dark .priority_picker_priorities--p1>span:first-child,
-    .theme_dark .priority_picker_priorities--p2>span:nth-child(2),
-    .theme_dark .priority_picker_priorities--p3>span:nth-child(3),
-    .theme_dark .priority_picker_priorities--p4>span:nth-child(4) {
-        border-color:var(--current-line);
-    }
+  /* Border around the priority dropdown in the task view */
+  .theme_dark .priority_picker_priorities--p1 > span:first-child,
+  .theme_dark .priority_picker_priorities--p2 > span:nth-child(2),
+  .theme_dark .priority_picker_priorities--p3 > span:nth-child(3),
+  .theme_dark .priority_picker_priorities--p4 > span:nth-child(4) {
+    border-color: var(--current-line);
+  }
 
-    /* Untested because I, SIMULATAN, don't have Todoist Pro */
-    .theme_dark .reminders_picker_options {
-         border-color: var(--current-line) !important;
-    }
-    .theme_dark .reminders_picker_option:hover {
-        background-color: var(--background-secondary);
-    }
-    .theme_dark .reminders_picker {
-        background-color: var(--background-primary);
-        border-color: var(--current-line) !important;
-    }
-    .theme_dark .reminders_picker h2 {
-        color:hsla(0,0%,100%,.87)
-    }
+  /* Untested because I, SIMULATAN, don't have Todoist Pro */
+  .theme_dark .reminders_picker_options {
+    border-color: var(--current-line) !important;
+  }
+  .theme_dark .reminders_picker_option:hover {
+    background-color: var(--background-secondary);
+  }
+  .theme_dark .reminders_picker {
+    background-color: var(--background-primary);
+    border-color: var(--current-line) !important;
+  }
+  .theme_dark .reminders_picker h2 {
+    color: hsla(0, 0%, 100%, 0.87);
+  }
 
-    /* Task Dropdown, "Delete task" button */
-    .theme_dark .menu_list .menu_item.danger_menu:hover * {
-     color: var(--red);
-    }
+  /* Task Dropdown, "Delete task" button */
+  .theme_dark .menu_list .menu_item.danger_menu:hover * {
+    color: var(--red);
+  }
 
-    /* Quick Menu that comes up when pressing "Ctrl + K" */
-    .theme_dark .command_menu_overlay div[role=option][aria-selected=true] {
-        /* left bar */
-        border-color: var(--accent-color);
-        background-color: var(--background-primary-5-lighter);
-    }
+  /* Quick Menu that comes up when pressing "Ctrl + K" */
+  .theme_dark .command_menu_overlay div[role="option"][aria-selected="true"] {
+    /* left bar */
+    border-color: var(--accent-color);
+    background-color: var(--background-primary-5-lighter);
+  }
 
-    /* User dropdown */
-    .theme_dark .user_menu[role=menu],
-    .theme_dark .user_menu[role=menubar] {
-        background-color: var(--background-secondary);
-        color: var(--foreground);
-    }
+  /* User dropdown */
+  .theme_dark .user_menu[role="menu"],
+  .theme_dark .user_menu[role="menubar"] {
+    background-color: var(--background-secondary);
+    color: var(--foreground);
+  }
 
-    /* Border around the avatar when the user dropdown is clicked */
-    .theme_dark .settings_btn[aria-expanded="true"] .settings_avatar {
-      border-color: var(--current-line-25-lighter) !important;
-    }
+  /* Border around the avatar when the user dropdown is clicked */
+  .theme_dark .settings_btn[aria-expanded="true"] .settings_avatar {
+    border-color: var(--current-line-25-lighter) !important;
+  }
 
-    /* Little icon next to the "Upgrade to Business" text */
-    .theme_dark .user_menu[role=menu] svg.business_icon,
-    .theme_dark .user_menu[role=menubar] svg.business_icon {
-        color: var(--purple);
-    }
+  /* Little icon next to the "Upgrade to Business" text */
+  .theme_dark .user_menu[role="menu"] svg.business_icon,
+  .theme_dark .user_menu[role="menubar"] svg.business_icon {
+    color: var(--purple);
+  }
 
-    /* user dropdown, item hover */
-    .theme_dark .user_menu [role=menuitem]:focus,
-    .theme_dark .user_menu [role=menuitem]:hover {
-        background-color: var(--background-primary) !important;
-        color: var(--foreground) !important;
-    }
+  /* user dropdown, item hover */
+  .theme_dark .user_menu [role="menuitem"]:focus,
+  .theme_dark .user_menu [role="menuitem"]:hover {
+    background-color: var(--background-primary) !important;
+    color: var(--foreground) !important;
+  }
 
-    /* background of the settings menu */
-    .theme_dark .z2xa2EEZZZaAceHgS7qJDg\=\= {
-        --reactist-bg-default: var(--background-secondary)
-    }
+  /* background of the settings menu */
+  .theme_dark .z2xa2EEZZZaAceHgS7qJDg\=\= {
+    --reactist-bg-default: var(--background-secondary);
+  }
 
-    /* background of form elements (for example seen in: Settings -> General) */
-    .theme_dark select, .theme_dark textarea {
-      background-color: var(--background-primary);
-    }
+  /* background of form elements (for example seen in: Settings -> General) */
+  .theme_dark select,
+  .theme_dark textarea {
+    background-color: var(--background-primary);
+  }
 
-    /* Settings menu - selected item */
-    .theme_dark .KFv0t5AHC5ukPUyFOjNy7w\=\=.fZL3ZYqayoo26EK7f47cyw\=\= {
-        background-color: var(--background-primary-10-lighter);
-    }
+  /* Settings menu - selected item */
+  .theme_dark .KFv0t5AHC5ukPUyFOjNy7w\=\=.fZL3ZYqayoo26EK7f47cyw\=\= {
+    background-color: var(--background-primary-10-lighter);
+  }
 
-    /* Hover + selected item in the left bar (Project Selector) */
-    .theme_dark .bwinE4g8Ubo\+bdRFBhZqsg\=\=:hover,
-    .theme_dark .DebMdpIqKcFRpFpVm5-wrA\=\= .bwinE4g8Ubo\+bdRFBhZqsg\=\=,
-    .theme_dark .eubGKL5CZbRqMPNBJ3AgNA\=\= .bwinE4g8Ubo\+bdRFBhZqsg\=\=,
-    .theme_dark .tbPt3rK1Y\+-l\+2KyGlnEKQ\=\= .bwinE4g8Ubo\+bdRFBhZqsg\=\= {
-        background-color: var(--background-secondary);
-    }
+  /* Hover + selected item in the left bar (Project Selector) */
+  .theme_dark .bwinE4g8Ubo\+bdRFBhZqsg\=\=:hover,
+  .theme_dark .DebMdpIqKcFRpFpVm5-wrA\=\= .bwinE4g8Ubo\+bdRFBhZqsg\=\=,
+  .theme_dark .eubGKL5CZbRqMPNBJ3AgNA\=\= .bwinE4g8Ubo\+bdRFBhZqsg\=\=,
+  .theme_dark .tbPt3rK1Y\+-l\+2kyglnekq\=\= .bwinE4g8Ubo\+bdRFBhZqsg\=\= {
+    background-color: var(--background-secondary);
+  }
 
-    /* Task count (next to the "Today" element in the left bar) */
-    .theme_dark .mKhIUVyJYf3pexnRkJu3eA\=\= {
-        color: var(--accent-color);
-    }
+  /* Task count (next to the "Today" element in the left bar) */
+  .theme_dark .mKhIUVyJYf3pexnRkJu3eA\=\= {
+    color: var(--accent-color);
+  }
 
-    /* Search Bar */
-    .theme_dark #quick_find .quick_find__input {
-        background-color: var(--background-primary);
-    }
+  /* Search Bar */
+  .theme_dark #quick_find .quick_find__input {
+    background-color: var(--background-primary);
+  }
 
-    /* Search Bar - Hover */
-    .theme_dark #quick_find.active .quick_find__input, .theme_dark #quick_find:not(.disabled):hover .quick_find__input {
-        background-color: var(--background-primary-5-lighter);
-    }
+  /* Search Bar - Hover */
+  .theme_dark #quick_find.active .quick_find__input,
+  .theme_dark #quick_find:not(.disabled):hover .quick_find__input {
+    background-color: var(--background-primary-5-lighter);
+  }
 
-    /* Search Bar - "when you click on it" */
-    .theme_dark #quick_find [role="listbox"] {
-        background-color: var(--background-primary);
-    }
+  /* Search Bar - "when you click on it" */
+  .theme_dark #quick_find [role="listbox"] {
+    background-color: var(--background-primary);
+  }
 
-    /* Search Bar - item hover | don't remove or add spaces or it'll break (for some reason...) */
-    .theme_dark #quick_find [role="listbox"] [role="option"][aria-selected="true"], .theme_dark #quick_find [role="listbox"] [role="option"]:hover {
-        background-color: var(--background-secondary) !important;
-    }
+  /* Search Bar - item hover | don't remove or add spaces or it'll break (for some reason...) */
+  .theme_dark
+    #quick_find
+    [role="listbox"]
+    [role="option"][aria-selected="true"],
+  .theme_dark #quick_find [role="listbox"] [role="option"]:hover {
+    background-color: var(--background-secondary) !important;
+  }
 
-    /* hovering over a link in a task */
-    .theme_dark .task_content a:hover, .theme_dark .task_item_content_text a:hover {
-      color: var(--accent-color) !important;
-    }
+  /* hovering over a link in a task */
+  .theme_dark .task_content a:hover,
+  .theme_dark .task_item_content_text a:hover {
+    color: var(--accent-color) !important;
+  }
 
-    /* multi selecting items */
-    .theme_dark .task_list_item.task_list_item--ctx_menu_opened, .theme_dark .task_list_item[data-selection-id][aria-selected="true"] {
-        background-color: var(--background-secondary);
-        /* PATCH: no padding whatsoever when multi selecting items - these two changes just add a bit of color outside of the usual bounds.
+  /* multi selecting items */
+  .theme_dark .task_list_item.task_list_item--ctx_menu_opened,
+  .theme_dark .task_list_item[data-selection-id][aria-selected="true"] {
+    background-color: var(--background-secondary);
+    /* PATCH: no padding whatsoever when multi selecting items - these two changes just add a bit of color outside of the usual bounds.
            therefore there's a padding between the outline of the actual content and the background color */
-        margin: 0 -1%;
-        padding: 0 1%;
-    }
+    margin: 0 -1%;
+    padding: 0 1%;
+  }
 
-    /* multi selecting items - top bar buttons */
-    .theme_dark .multi_select_toolbar button {
-      color: var(--accent-color) !important;
-    }
+  /* multi selecting items - top bar buttons */
+  .theme_dark .multi_select_toolbar button {
+    color: var(--accent-color) !important;
+  }
 
-    /* context actions on the right of task items (on hover) - it's usually a gradient, but imo it looks better without any background at all */
-    .theme_dark .task_list_item:hover .task_list_item__actions, .theme_dark .task_list_item__actions__active {
-        background: unset;
-    }
+  /* context actions on the right of task items (on hover) - it's usually a gradient, but imo it looks better without any background at all */
+  .theme_dark .task_list_item:hover .task_list_item__actions,
+  .theme_dark .task_list_item__actions__active {
+    background: unset;
+  }
 
-    /* Premium Modal - general background */
-    .theme_dark #GB_window, .theme_dark .GB_window .g_header, .theme_dark .notes_tab_container .g_header  {
-        background-color: var(--background-primary) !important;
-    }
+  /* Premium Modal - general background */
+  .theme_dark #GB_window,
+  .theme_dark .GB_window .g_header,
+  .theme_dark .notes_tab_container .g_header {
+    background-color: var(--background-primary) !important;
+  }
 
-    /* Premium Modal - seperate section */
-    .theme_dark .PremiumOnlyModal h1 {
-        background-color: var(--background-secondary);
-    }
-    
-    .theme_dark .reschedule_menu__button {
-      color: var(--accent-color);
-    }
+  /* Premium Modal - seperate section */
+  .theme_dark .PremiumOnlyModal h1 {
+    background-color: var(--background-secondary);
+  }
 
-    /* TODO
+  .theme_dark .reschedule_menu__button {
+    color: var(--accent-color);
+  }
+
+  /* TODO
      * - Notifications (weird obfuscated classes)
      * - Comments (I don't have Todoist Premium)
      */
