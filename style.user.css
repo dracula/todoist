@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dracula for Todoist
 @namespace      github.com/dracula
-@version        1.2.0
+@version        1.3.0
 @description    A dark theme for Todoist
 @homepageURL    https://draculatheme.com/todoist
 @supportURL     https://github.com/dracula/todoist/issues
@@ -382,6 +382,25 @@
   .theme_dark .reschedule_menu__button {
     color: var(--accent-color);
   }
+
+  .theme_dark .quick_add__body, .theme_dark .quick_add .quick_add__body .task_editor__editing_area, .theme_dark .quick_add .task_editor .task_editor__description_field {
+    background-color: var(--background-primary);
+  }
+
+   /* Hide upgrade button */
+    .theme_dark a[href="/pricing/upgrade"], .theme_dark button[data-testid*="upgrade-button"] {
+        display: none;
+    }
+
+    /* Quick add task popup */
+    .theme_dark .quick_add__body, .theme_dark .quick_add .quick_add__body .task_editor__editing_area, .theme_dark .quick_add .task_editor .task_editor__description_field {
+        background-color: var(--background-primary);
+    }
+
+    /* "Add website as task" in browser extension */
+    .theme_dark .quick_add__attach_email button {
+        color: var(--accent-color);
+    }
 
   /* TODO
      * - Notifications (weird obfuscated classes)
