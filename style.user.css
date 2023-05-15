@@ -404,10 +404,7 @@
       color: var(--accent-color);
   }
 
-  /* TODO
-   * - Comments (I don't have Todoist Premium)
-   */
-
+  /* Notifications */
   .theme_dark .r3v6\+mvJbfli0RxEpvcCiA\=\= {
       background-color:var(--background-secondary);
   }
@@ -415,4 +412,8 @@
   .theme_dark .r3v6\+mvJbfli0RxEpvcCiA\=\=:after {
       background-color:var(--accent-color);
   }
+
+  /* TODO
+   * - Comments (I don't have Todoist Premium)
+   */
 }
