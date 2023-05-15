@@ -51,7 +51,7 @@
     --reactist-bg-default: var(--background-primary) !important;
 
     /* more or less unused, here for good measure */
-    --app-background-color: var(background-primary) !important;
+    --app-background-color: var(--background-primary) !important;
 
     /* font color */
     --reactist-btn-idle-tint: var(--foreground) !important;
@@ -59,60 +59,62 @@
     --task-divider: var(--current-line);
 
     /* menu items: background color on hover */
-    --reactist-actionable-tertiary-hover-fill: var(--background-primary);
+    --reactist-actionable-tertiary-hover-fill: var(--background-primary) !important;
 
     /* Primary Buttons (accent color) - we use slightly darker colors here because the dracula purple doesn't have a good contrast with the white */
-    --reactist-actionable-primary-idle-fill: var(--purple-15-darker);
-    --reactist-actionable-primary-hover-fill: var(--purple-25-darker);
-    --reactist-actionable-primary-disabled-fill: var(--purple-disabled);
-    --reactist-actionable-primary-idle-tint: var(--foreground);
+    --reactist-actionable-primary-idle-fill: var(--purple-15-darker) !important;
+    --reactist-actionable-primary-hover-fill: var(--purple-25-darker) !important;
+    --reactist-actionable-primary-disabled-fill: var(--purple-disabled) !important;
+    --reactist-actionable-primary-idle-tint: var(--foreground) !important;
     --reactist-actionable-primary-hover-tint: var(
       --reactist-actionable-primary-idle-tint
-    );
+    ) !important;
 
     /* Buttons in the Settings Menu */
     --reactist-actionable-secondary-idle-fill: var(
       --background-primary-10-lighter
-    );
+    ) !important;
     --reactist-actionable-secondary-hover-fill: var(
       --background-primary-5-lighter
-    );
-    --reactist-actionable-secondary-disabled-fill: var(--disabled);
-    --reactist-actionable-secondary-destructive-idle-tint: var(--red);
+    ) !important;
+    --reactist-actionable-secondary-disabled-fill: var(--disabled) !important;
+    --reactist-actionable-secondary-destructive-idle-tint: var(--red) !important;
     --reactist-actionable-secondary-destructive-hover-tint: var(
       --red-25-darker
-    );
+    ) !important;
 
     /* Item hover in the left sidebar of the settings menu */
-    --reactist-actionable-quaternary-hover-fill: var(--background-secondary);
+    --reactist-actionable-quaternary-hover-fill: var(--background-secondary) !important;
 
     /* Buttons like the "Add section" one - @Todoist, why are there so many different variables??? Please, standardize the system! */
-    --theme-button-bg: var(--reactist-actionable-primary-idle-fill);
-    --theme-button-color: var(--reactist-actionable-primary-idle-tint);
+    --theme-button-bg: var(--reactist-actionable-primary-idle-fill) !important;
+    --theme-button-color: var(--reactist-actionable-primary-idle-tint) !important;
 
     /* Ticks, for example in the priority selector dropdown of the task view */
-    --theme-scheduler-primary-color: var(--accent-color);
+    --theme-scheduler-primary-color: var(--accent-color) !important;
     /* Dropdowns like the "more actions" (three dots) in the task view */
-    --reactist-bg-menu: var(--background-primary);
+    --reactist-bg-menu: var(--background-primary) !important;
     /* Plus symbol in the project view */
-    --theme-add-task-icon-color: var(--accent-color);
+    --theme-add-task-icon-color: var(--accent-color) !important;
     /* "Add task" text - on hover */
-    --theme-add-task-text-color: var(--accent-color);
+    --theme-add-task-text-color: var(--accent-color) !important;
 
-    --tooltip-idle-fill: var(--background-secondary);
+    --tooltip-idle-fill: var(--background-secondary) !important;
 
     /* "Your Productivity" dropdown */
-    --background-base-primary: var(--background-primary);
+    --background-base-primary: var(--background-primary) !important;
     /* Top bar when multi selecting tasks */
-    --background-base-secondary: var(--background-secondary);
+    --background-base-secondary: var(--background-secondary) !important;
 
     /* Border around the duration selector in the "Your Productivity" dropdown */
-    --reactist-tab-neutral-track: var(--current-line);
+    --reactist-tab-neutral-track: var(--current-line) !important;
 
     /* toasts (like the "Todoist for Operatingsystem") */
-    --reactist-bg-toast: var(--background-secondary);
-    --reactist-toast-actionable-primary-tint: var(--accent-color);
-    --reactist-toast-actionable-hover-fill: var(--background-primary-5-lighter);
+    --reactist-bg-toast: var(--background-secondary) !important;
+    --reactist-toast-actionable-primary-tint: var(--accent-color) !important;
+    --reactist-toast-actionable-hover-fill: var(--background-primary-5-lighter) !important;
+
+    --product-library-background-base-primary: var(--background-primary) !important;
   }
 
   /* Priority Colors */
@@ -387,23 +389,30 @@
     background-color: var(--background-primary);
   }
 
-   /* Hide upgrade button */
-    .theme_dark a[href="/pricing/upgrade"], .theme_dark button[data-testid*="upgrade-button"] {
-        display: none;
-    }
+ /* Hide upgrade button */
+  .theme_dark a[href="/pricing/upgrade"], .theme_dark button[data-testid*="upgrade-button"] {
+      display: none;
+  }
 
-    /* Quick add task popup */
-    .theme_dark .quick_add__body, .theme_dark .quick_add .quick_add__body .task_editor__editing_area, .theme_dark .quick_add .task_editor .task_editor__description_field {
-        background-color: var(--background-primary);
-    }
+  /* Quick add task popup */
+  .theme_dark .quick_add__body, .theme_dark .quick_add .quick_add__body .task_editor__editing_area, .theme_dark .quick_add .task_editor .task_editor__description_field {
+      background-color: var(--background-primary);
+  }
 
-    /* "Add website as task" in browser extension */
-    .theme_dark .quick_add__attach_email button {
-        color: var(--accent-color);
-    }
+  /* "Add website as task" in browser extension */
+  .theme_dark .quick_add__attach_email button {
+      color: var(--accent-color);
+  }
 
   /* TODO
-     * - Notifications (weird obfuscated classes)
-     * - Comments (I don't have Todoist Premium)
-     */
+   * - Comments (I don't have Todoist Premium)
+   */
+
+  .theme_dark .r3v6\+mvJbfli0RxEpvcCiA\=\= {
+      background-color:var(--background-secondary);
+  }
+
+  .theme_dark .r3v6\+mvJbfli0RxEpvcCiA\=\=:after {
+      background-color:var(--accent-color);
+  }
 }
