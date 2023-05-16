@@ -115,6 +115,8 @@
     --reactist-toast-actionable-hover-fill: var(--background-primary-5-lighter) !important;
 
     --product-library-background-base-primary: var(--background-primary) !important;
+    --product-library-display-accent-primary-fill: var(--accent-color) !important;
+    --product-library-display-accent-primary-tint: var(--accent-color) !important;
   }
 
   /* Priority Colors */
