@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dracula for Todoist
 @namespace      github.com/dracula
-@version        2.0.0
+@version        2.0.1
 @description    A dark theme for Todoist
 @homepageURL    https://draculatheme.com/todoist
 @supportURL     https://github.com/dracula/todoist/issues
@@ -115,6 +115,7 @@
     --reactist-toast-actionable-hover-fill: var(--background-primary-5-lighter) !important;
 
     --product-library-background-base-primary: var(--background-primary) !important;
+    --product-library-background-base-secondary: var(--background-secondary) !important;
     --product-library-display-accent-primary-fill: var(--accent-color) !important;
     --product-library-display-accent-primary-tint: var(--accent-color) !important;
   }
