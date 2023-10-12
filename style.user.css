@@ -43,7 +43,7 @@
 
     /* used by the side bars (start page and task detail view) */
     --reactist-bg-aside: var(--background-primary) !important;
-    --product-library-navbar-idle-fill: var(--reactist-bg-aside)
+    --product-library-navbar-idle-fill: var(--app-topbar-background-color) !important;
 
     /* unused by the vanilla app, but we use this variable a bit further down */
     --app-topbar-background-color: var(--background-secondary) !important;
@@ -61,7 +61,7 @@
 
     /* menu items: background color on hover */
     --reactist-actionable-tertiary-hover-fill: var(--background-primary) !important;
-      
+
     /* Projects dropdown */
     --product-library-navbar-hover-fill: var(--reactist-actionable-tertiary-hover-fill) !important;
 
@@ -421,7 +421,7 @@
   .theme_dark .r3v6\+mvJbfli0RxEpvcCiA\=\=:after {
       background-color:var(--accent-color);
   }
-    
+
   /* "Projects" dropdown in sidebar - for some reason uses `--reactist-bg-aside` */
   .theme_dark div[data-expansion-panel-header="true"]:has(div):has(a[href="/app/projects"]) {
       background-color: unset;
