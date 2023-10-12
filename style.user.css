@@ -43,7 +43,7 @@
 
     /* used by the side bars (start page and task detail view) */
     --reactist-bg-aside: var(--background-primary) !important;
-    --product-library-navbar-idle-fill: var(--reactist-bg-aside);
+    --product-library-navbar-idle-fill: var(--app-topbar-background-color) !important;
 
     /* unused by the vanilla app, but we use this variable a bit further down */
     --app-topbar-background-color: var(--background-secondary) !important;
