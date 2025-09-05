@@ -13,7 +13,7 @@
 
 @-moz-document domain("todoist.com") {
   /* don't add any spaces or anything or it'll break */
-  html:root.theme_dark {
+  html:root.theme_dark, html:root.theme_dark * {
     --background-primary: #282a36;
     --background-primary-5-lighter: #313342;
     --background-primary-10-lighter: #3a3d4e;
@@ -38,6 +38,8 @@
     --disabled: #505158;
     /* Non-Standard Color: lerped between purple (15% darker) and gray (#808080) */
     --purple-disabled: #8776a0;
+    /* Non-Standard Color: lerped between foreground (75%) and gray (#808080, 25%) */
+    --foreground-disabled: #dadad5;
 
     --accent-color: var(--purple);
 
@@ -56,6 +58,7 @@
 
     /* font color */
     --reactist-btn-idle-tint: var(--foreground) !important;
+    --reactist-btn-disabled-tint: var(--foreground-disabled) !important;
 
     --task-divider: var(--current-line);
 
@@ -65,8 +68,10 @@
     /* Projects dropdown */
     --product-library-navbar-hover-fill: var(--reactist-actionable-tertiary-hover-fill) !important;
 
-    /* Primary Buttons (accent color) - we use slightly darker colors here because the dracula purple doesn't have a good contrast with the white */
+    /* Primary Buttons (accent color) - we use slightly darker colors here because the Dracula purple doesn't have a good contrast with the white */
     --reactist-actionable-primary-idle-fill: var(--purple-15-darker) !important;
+    /* doesn't affect text buttons - regular Dracula color is fine */
+    --product-library-actionable-primary-idle-fill: var(--purple) !important;
     --reactist-actionable-primary-hover-fill: var(--purple-25-darker) !important;
     --reactist-actionable-primary-disabled-fill: var(--purple-disabled) !important;
     --reactist-actionable-primary-idle-tint: var(--foreground) !important;
@@ -89,6 +94,8 @@
 
     /* Item hover in the left sidebar of the settings menu */
     --reactist-actionable-quaternary-hover-fill: var(--background-secondary) !important;
+      
+    --reactist-actionable-focus-fill: var(--current-line) !important;
 
     /* Buttons like the "Add section" one - @Todoist, why are there so many different variables??? Please, standardize the system! */
     --theme-button-bg: var(--reactist-actionable-primary-idle-fill) !important;
@@ -120,10 +127,17 @@
 
     --product-library-background-base-primary: var(--background-primary) !important;
     --product-library-background-base-secondary: var(--background-secondary) !important;
+    --product-library-background-grouped-secondary: var(--background-primary-5-lighter) !important;
     --product-library-display-accent-primary-fill: var(--accent-color) !important;
     --product-library-display-accent-primary-tint: var(--accent-color) !important;
     /* selected project in sidebar background color */
-    --product-library-navbar-selected-fill: var(--product-library-navbar-hover-fill) !important;
+    --product-library-navbar-selected-fill: color-mix(in srgb, var(--purple) 25%, transparent) !important;
+
+    --product-library-selectable-secondary-hover-fill: var(--product-library-navbar-hover-fill) !important;
+    --product-library-selectable-secondary-selected-fill: var(--product-library-navbar-selected-fill) !important;
+    /* selected navbar item */
+    --product-library-selectable-secondary-on-selected-fill: unset;
+    --product-library-selectable-secondary-on-selected-tint: unset;
   }
 
   /* Priority Colors */
