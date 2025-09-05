@@ -9,8 +9,6 @@
 @license        MIT
 ==/UserStyle== */
 
-/* NOTE: "!important" is only appended when strictly necessary to override a style. */
-
 @-moz-document domain("todoist.com") {
   /* don't add any spaces or anything or it'll break */
   html:root.theme_dark, html:root.theme_dark * {
